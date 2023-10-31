@@ -23,17 +23,17 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .authorizeHttpRequests()
+                .authorizeHttpRequests()
                 .requestMatchers("/home/**").permitAll()
-            .anyRequest().authenticated()
-            .and()
-            .formLogin()
-            .loginPage("/home")
-            .defaultSuccessUrl("/usuario/pedido", true)
-            .permitAll()
-            .and()
-            .logout().logoutSuccessUrl("/home")
-            .permitAll();
+                .anyRequest().authenticated()
+                .and()
+                .formLogin()
+                .loginPage("/login")
+                .defaultSuccessUrl("/usuario/pedido", true)
+                .permitAll()
+                .and()
+                .logout().logoutSuccessUrl("/")
+                .permitAll();
         http.csrf().disable();
         return http.build();
     }

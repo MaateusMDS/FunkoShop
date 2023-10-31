@@ -18,7 +18,7 @@ import br.com.fiap.FunkoShop.model.Pedido;
 import br.com.fiap.FunkoShop.repository.PedidoRepository;
 
 @RestController
-@RequestMapping("/home")
+@RequestMapping("/")
 public class HomeController {
 
 	@Autowired
