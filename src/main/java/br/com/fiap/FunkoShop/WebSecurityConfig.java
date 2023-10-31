@@ -28,7 +28,7 @@ public class WebSecurityConfig {
             .anyRequest().authenticated()
             .and()
             .formLogin()
-            .loginPage("/login")
+            .loginPage("/home")
             .defaultSuccessUrl("/usuario/pedido", true)
             .permitAll()
             .and()
